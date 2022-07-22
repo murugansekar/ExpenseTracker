@@ -11,16 +11,16 @@ const User = require('./models/user');
 const Expense = require('./models/expense')
 const Order = require('./models/orders');
 const Forgotpassword = require('./models/forgotpassword');
-const helmet = require('helmet')
-const morgan = require('morgan')
+//const helmet = require('helmet')
+//const morgan = require('morgan')
 
 const app = express();
 app.use(cors())
 
 const routes = require('./routes/general');
-const accessLogStream = fs.createWriteStream(path.join(__dirname,'access.log'), {flags: 'a'})
-app.use(helmet())
-app.use(morgan('combined',{ stream: accessLogStream}))
+//const accessLogStream = fs.createWriteStream(path.join(__dirname,'access.log'), {flags: 'a'})
+//app.use(helmet())
+//app.use(morgan('combined',{ stream: accessLogStream}))
 app.use(bodyParser.urlencoded({ extended: true })); 
 app.use(bodyParser.json());    
 app.use(express.static(path.join(__dirname, 'public')));
