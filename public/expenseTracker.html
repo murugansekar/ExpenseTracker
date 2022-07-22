@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>Expense Tracker</h1>
+    </header>
+      <form id="my-form">
+        <div class="msg"></div>
+        <div>
+          <label for="expenseamount"> Choose expenseamount : </label>
+          <input type="number" id="expenseamount">
+      
+          <label for="description"> Choose description : </label>
+          <input type="text" id="description">
+          
+          <label for="category"> Choose a category : </label>
+          <select name="category" id="category">
+            <option value="fuel">fuel</option>
+            <option value="food">food</option>
+            <option value="electricity">electricity</option>
+            <option value="movie">movie</option>
+          </select>
+          
+        </div>
+        <br>
+        <input type="submit" value="Add Expense">
+      </form>
+      <br>
+      <br>
+      <div class="NoOfRows">
+      <label for="NoOfRows"> No. Of Rows : </label>
+      <input type="number" id="NoOfRows" name="NoOfRows" min="5" max="100" value="5" step="5" onchange="getValue(this);">
+      
+      </div>
+      <br>
+      <h3>Expense Details</h3>
+      <div id="output"></div>
+      <br>
+      <section class="pagination" id="pagination">
+        
+      </section>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js"></script>
+      <button id="rzp-button1">Buy Premium</button>
+      <button onclick="downloadFile()" id="downloadexpense">Download File</button>
+      <div id="premium"></div>
+      <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+      <script src="ExpenseTrackerAPI.js"></script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+body.dark
+{
+    background-color: black;
+    color: aliceblue;
+}
+
+
+
+.pagination
+{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+    text-align: center;
+    margin-left : 35rem;
+}
+.pagination-btn 
+{
+    text-decoration: none;
+    color: #00695c;
+    padding: 0.5rem;
+    border: 1px solid #00695c;
+    margin: 0 1rem;
+  }
+  
+  .pagination-btn:hover,
+  .pagination-btn:active
+  .pagination-btn.active {
+    background: #00695c;
+    color: white;
+  }
+
+.NoOfRows
+{
+    padding-left: 25rem;
+}
+
