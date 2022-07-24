@@ -28,7 +28,7 @@ function onSubmit(e)
 
       if(result.data.success)
       {
-        window.location.replace("http://127.0.0.1:3000/frontend/expenseTracker.html");
+        window.location.replace("http://3.101.24.227:3000/expenseTracker.html");
       }
       }).catch(err => console.log(err))
   }
