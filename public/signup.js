@@ -28,7 +28,7 @@ function onSubmit(e)
       }
       if(result.data.success)
       {
-        window.location.replace("http://3.101.24.227:3000/frontend/signin.html");
+        window.location.replace("http://3.101.24.227:3000/signin.html");
       }
       //window.location.replace("http://127.0.0.1:5500/frontend/signin.html");
       }).catch(err => console.log(err))
