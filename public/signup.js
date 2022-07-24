@@ -8,7 +8,7 @@ function onSubmit(e)
   const email = document.getElementById("email").value;
   const pNumber = document.getElementById("pNumber").value;
   const password = document.getElementById("password").value;
-  //e.preventDefault();
+  e.preventDefault();
   if(nam === '' || email === '' || pNumber === '' || password === '') 
   {
     msg.innerHTML = 'Please enter all fields*';
@@ -21,16 +21,11 @@ function onSubmit(e)
       if(result.data.success)
       {
         alert("Successfuly signed up")
-      }
-      else
-      {
-        alert("User already exists, Please Login")
-      }
-      if(result.data.success)
-      {
         window.location.replace("http://3.101.24.227:3000/signin.html");
       }
-      //window.location.replace("http://127.0.0.1:5500/frontend/signin.html");
+      else
+        alert("User already exists, Please Login")
+      
       }).catch(err => console.log(err))
   }
 }
