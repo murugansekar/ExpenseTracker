@@ -19,17 +19,11 @@ function onSubmit(e)
       if(result.data.success)
       {
         localStorage.setItem('token',result.data.token)
-      }
-      else
-      {
-        alert("Login failed")
-      }
-
-
-      if(result.data.success)
-      {
         window.location.replace("http://3.101.24.227:3000/expenseTracker.html");
       }
+      else
+        alert("Login failed")
+
       }).catch(err => console.log(err))
   }
 }
